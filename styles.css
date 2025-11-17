@@ -1,0 +1,131 @@
+/* --- Root Variables for Colors (Same Palette) --- */
+:root {
+    --bg-dark: rgb(24, 28, 20);
+    --text-light: rgb(236, 223, 204);
+    --card-bg: rgb(105, 117, 101);
+    --skill-tag-bg: rgb(85, 97, 81);
+}
+
+/* --- General Body & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 2rem 1rem; /* Add some padding around the whole page */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto; /* Center the main content */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between all sections */
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1rem;
+    max-width: 60ch; /* Improves readability */
+}
+
+p.subtitle {
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2.5rem;
+    flex-grow: 1; /* Allow it to take up space */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder card for visual balance */
+.placeholder-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    width: 200px; /* Example fixed width */
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Shared Card Styles --- */
+.content-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Link Styling --- */
+.content-card a {
+    display: inline-block;
+    color: var(--text-light);
+    background-color: var(--skill-tag-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.content-card a:hover {
+    background-color: var(--bg-dark);
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+
+/* --- Skills Section Specifics --- */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows categories to stack on smaller screens */
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 200px; /* Ensures categories don't get too squished */
+}
+
+.skills-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skills-list li {
+    background-color: var(--skill-tag-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+}
